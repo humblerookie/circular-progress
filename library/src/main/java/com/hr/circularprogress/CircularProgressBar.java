@@ -38,7 +38,7 @@ public class CircularProgressBar extends ProgressBar {
         final int maxSweepAngle = a.getInteger(R.styleable.CircularProgressBar_cpb_max_sweep_angle, res.getInteger(R.integer.cpb_default_max_sweep_angle));
         final int gradientStart = a.getColor(R.styleable.CircularProgressBar_cpb_gradient_start, defaultColor);
         final int gradientEnd = a.getColor(R.styleable.CircularProgressBar_cpb_gradient_end, defaultColor);
-        final int gradientHeight = getHeight() == 0 ? (int) context.getResources().getDimension(R.dimen.cpb_default_gradient_height) : getHeight();
+        final int gradientHeight = (int) a.getDimension(R.styleable.CircularProgressBar_cpb_gradient_height, res.getDimension(R.dimen.cpb_default_gradient_height));
         a.recycle();
 
         int[] colors = null;
